@@ -24,9 +24,6 @@ export default {
       db.collection('urls').add({
         url,
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
-      }).then(ref => {
-        // eslint-disable-next-line no-console
-        console.log('Added document with ID: ', ref.id);
       }).catch(e => {
         // eslint-disable-next-line no-console
         console.error(e);

@@ -11,18 +11,18 @@
 </template>
 
 <script>
-
 function convertYoutubeToEmbed(url) {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    const query = url.split('?').pop();
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  const query = url.split("?").pop();
 
-    return (match && match[2].length === 11)
-      ? `//www.youtube.com/embed/${match[2]}?autoplay=1&controls=0&${query}` : url;
+  return match && match[2].length === 11
+    ? `//www.youtube.com/embed/${match[2]}?autoplay=1&controls=0&${query}`
+    : url;
 }
 
 export default {
-  name: "UrlForm",
+  name: 'UrlForm',
   props: {
     addUrl: {
       type: Function
@@ -30,22 +30,17 @@ export default {
   },
   data() {
     return {
-      url: ""
+      url: ''
     };
   },
   methods: {
     onSubmit() {
       if (this.url.trim().length > 5) {
         const url = this.url.trim();
-        this.url = "";
+        this.url = '';
         this.addUrl(convertYoutubeToEmbed(url));
-      } else {
-        alert("Please write a correct sentence");
       }
     }
   }
 };
 </script>
-
-<style scoped>
-</style>

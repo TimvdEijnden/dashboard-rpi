@@ -16,7 +16,7 @@ export default {
       type: Array
     },
     lastUrl: {
-        type: String
+      type: String
     }
   }
 };
@@ -24,12 +24,12 @@ export default {
 
 <style scoped>
 .url-list {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
- ul {
-     list-style: none;
-     text-align: left;
- }
+ul {
+  list-style: none;
+  text-align: left;
+}
 </style>

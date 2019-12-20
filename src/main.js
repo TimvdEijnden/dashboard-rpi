@@ -6,8 +6,6 @@ import ManageView from './views/ManageView'
 import TVView from './views/TVView'
 
 Vue.config.productionTip = false
-Vue.config.ignoredElements = ['webview']
-
 
 const serialize = (doc) => {
   // add id to the documents
