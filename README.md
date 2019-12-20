@@ -35,7 +35,7 @@ VUE_APP_FIREBASE_PROJECT=my_firebase_project_id
 
 Create a Cloud Firestore Database and create an urls collection.
 
-![Cloud Firestore Database](https://raw.githubusercontent.com/timvdeijnden/dashboard-rpi/master/path/cloud_firestore_example.png)
+![Cloud Firestore Database](https://raw.githubusercontent.com/TimvdEijnden/dashboard-rpi/master/cloud_firestore_example.png)
 
 To allow read and write update the rules, note that this example allows EVERYONE to write to it!
 
